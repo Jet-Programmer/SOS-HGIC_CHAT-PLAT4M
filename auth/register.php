@@ -1,3 +1,5 @@
+<?php
+require_once("../inc/db.php");?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,31 +11,33 @@
     <link rel="stylesheet" href="../assets/form.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/script.js"></script>
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
-    <section>
-        <h1>Complete Login</h1>
-        <form action="../auth/register.php" method="POST">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+    <section class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="../auth/register.php" method="POST">
+                    <h2 class="mb-4 text-center"> Complete Registration</h2>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+        </div>
     </section>
     <footer class="mt-5">
-        <p class="text-center">© 2023 HGIC CHATPLAT4M. All rights reserved.</p>
+        <p class="text-center">© 2025 HGIC CHATPLAT4M. All rights reserved.</p>
     </footer>
 
     <?php

@@ -11,9 +11,9 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form action="form-processor.php" method="POST" class="card p-4 shadow">
-                <h2 class="mb-4 text-center">Sign Up </h2>
+                <h3 class="mb-4 text-center">Sign Up To HGIC ChatTPlat4M</h3>
                 <div class="mb-3">
-                    <label for="FirstName" class="form-label">First Name</label>
+                    <label for="FirstName" class="form-+label">First Name</label>
                     <input type="text" class="form-control" id="FirstName" name="firstname" placeholder="Enter first name" required>
                 </div>
                 <div class="mb-3">
@@ -53,6 +53,10 @@
                 <button type="submit" class="btn btn-primary w-100">Sign Up</button>
                 <div class="text-center mt-2">
                     <a href="./auth/register.php">Already have an account? Login</a>
+                </div>
+                <div class="checkbox mb-3">
+                    <input type="checkbox">
+                    <p>Remember Me</p>
                 </div>
             </form>
         </div>
