@@ -1,17 +1,226 @@
-nav {
-    text-decoration: none;
-    color: white;
-    align-content: space-between;
-}
-.my-nav {
-    text-decoration: none;
-    justify-content: space-between;
-    background-color: blue;
-    border-radius: 5px;
-    color: white;
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #f7f9fb;
+    color: #222;
+    min-height: 100vh;
 }
 
-.my-nav img{
-    width: 100%;
-    height: auto;
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #0056b3;
+    text-decoration: solid underline;
+}
+
+/* Navbar styles */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 0.7rem 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    font-size: 1.08rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+}
+
+.nav-links li a:hover, .nav-links li a:focus {
+    background: #e3f0ff;
+    color: #0070f3;
+}
+
+/* Intro section */
+.intro-section {
+    background: linear-gradient(120deg, #e3f0ff 0%, #f7f9fb 100%);
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.intro-container h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.intro-container p {
+    font-size: 1.25rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    border: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.75rem 2.2rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%);
+    transform: translateY(-2px) scale(1.03);
+    text-decoration: none;
+}
+
+/* Values section */
+.values-section {
+    padding: 3rem 0 2rem 0;
+    background: #fff;
+}
+
+.values-container .row {
+    justify-content: center;
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    background: #f7f9fb;
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.card:hover, .card:focus-within {
+    box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.card-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #1976d2;
+    margin-bottom: 0.8rem;
+}
+
+.card-text, .values-list {
+    color: #444;
+    font-size: 1.08rem;
+}
+
+.values-list {
+    margin: 0;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-size: 1.08rem;
+}
+
+.values-list i {
+    color: #1976d2;
+    font-size: 1.1em;
+}
+
+/* Footer */
+.footer {
+    background: #f1f4f8;
+    border-top: 1px solid #e3e8ee;
+    font-size: 1rem;
+    color: #555;
+    letter-spacing: 0.02em;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 991px) {
+    .nav-links {
+        gap: 1.2rem;
+    }
+    .intro-container h1 {
+        font-size: 2.1rem;
+    }
+    .intro-section {
+        padding: 2.5rem 0 2rem 0;
+    }
+    .values-section {
+        padding: 2rem 0 1rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    .intro-section {
+        padding: 2rem 0 1.2rem 0;
+    }
+    .values-section {
+        padding: 1.2rem 0 0.5rem 0;
+    }
+    .card-title {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .intro-container h1 {
+        font-size: 1.3rem;
+    }
+    .intro-container p {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
 }
