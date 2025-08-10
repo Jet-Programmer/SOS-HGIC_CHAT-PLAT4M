@@ -12,18 +12,17 @@ a {
     color: inherit;
     text-decoration: none;
     transition: color 0.2s;
-    text-decoration: none;
 }
 
 a:hover, a:focus {
     color: #0056b3;
-    text-decoration: solid underline;
+    text-decoration: underline;
 }
 
 /* Navbar styles */
 .navbar {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background: #f4f8fc; /* Softer pale blue */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     padding: 0.7rem 0;
 }
 
@@ -34,8 +33,8 @@ a:hover, a:focus {
 }
 
 .logo {
-    height: 48px;
-    width: auto;
+    height: 95px;
+    width: 100px;
     transition: transform 0.2s;
 }
 
@@ -72,7 +71,11 @@ a:hover, a:focus {
 .intro-section {
     background: linear-gradient(120deg, #e3f0ff 0%, #f7f9fb 100%);
     padding: 4rem 0 3rem 0;
-    text-align: center;
+}
+
+.intro-container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .intro-container h1 {
@@ -81,23 +84,81 @@ a:hover, a:focus {
     color: #1a237e;
     margin-bottom: 1.2rem;
     letter-spacing: 1px;
+    text-align: left;
+}
+
+.intro-container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .intro-container p {
     font-size: 1.25rem;
     color: #333;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
+    margin-bottom: 2rem;
     line-height: 1.7;
+    text-align: left;
 }
 
+.intro-container .col-md-7,
+.intro-container .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-container .col-md-7 {
+    flex: 0 0 56%;
+    max-width: 56%;
+}
+
+.intro-container .col-md-5 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    align-items: center;
+}
+
+.intro-container img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.13), 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Responsive intro balance */
+@media (max-width: 991px) {
+    .intro-container .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .intro-container .col-md-7,
+    .intro-container .col-md-5 {
+        max-width: 100%;
+        flex: 0 0 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .intro-container h1,
+    .intro-container p {
+        text-align: center;
+    }
+    .intro-container img {
+        margin: 1.5rem 0 0 0;
+        max-width: 80%;
+    }
+}
+
+/* Button */
 .btn-primary {
     background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
     border: none;
+    border-radius: 4px;
     font-size: 1.15rem;
     font-weight: 600;
     padding: 0.75rem 2.2rem;
-    border-radius: 30px;
     box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
     transition: background 0.2s, transform 0.15s;
     text-decoration: none;
@@ -106,7 +167,6 @@ a:hover, a:focus {
 .btn-primary:hover, .btn-primary:focus {
     background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%);
     transform: translateY(-2px) scale(1.03);
-    text-decoration: none;
 }
 
 /* Values section */
@@ -123,11 +183,13 @@ a:hover, a:focus {
     border: none;
     border-radius: 18px;
     background: #f7f9fb;
+    /* Enhanced, realistic shadow */
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13), 0 1.5px 6px rgba(0,0,0,0.07);
     transition: box-shadow 0.2s, transform 0.15s;
 }
 
 .card:hover, .card:focus-within {
-    box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18), 0 3px 12px rgba(0,0,0,0.10);
     transform: translateY(-4px) scale(1.02);
 }
 
@@ -163,17 +225,22 @@ a:hover, a:focus {
 
 /* Footer */
 .footer {
-    background: #f1f4f8;
+    background: 0.5rem, 0.1rem, rgba(25, 118, 210, 0.1);
     border-top: 1px solid #e3e8ee;
     font-size: 1rem;
-    color: #555;
+    color: #3a4a5d;
     letter-spacing: 0.02em;
     margin-top: 3rem;
+    box-shadow: 0 -2px 8px rgba(25, 118, 210, 0.04);
 }
 
 .footer p {
     margin: 0.5rem 0;
+    text-align: center;
+    opacity: 0.95;
 }
+
+
 
 /* Responsive design */
 @media (max-width: 991px) {
@@ -210,6 +277,12 @@ a:hover, a:focus {
     .card-title {
         font-size: 1.15rem;
     }
+}
+
+.my-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 575px) {

@@ -31,13 +31,21 @@
     <main>
         <section class="intro-section">
             <div class="container intro-container">
-                <h1>Welcome To SOS-HGIC ChatPlat4m</h1>
-                <p>
-                    This is a platform for seamless communication and collaboration. Here, your voice and opinions
-                    are kept safe from external interference. We value your privacy and ensure that your data is
-                    secure. Join us in creating a vibrant community where you can connect, share, and grow together.
-                </p>
-                <a href="#" class="btn btn-primary btn-lg mt-3">Get Started</a>
+                <h1>Welcome Student Leader!</h1>
+                <div class="row align-items-center">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p>
+                            HGIC ChatPlat4m is a platform for seamless communication and collaboration. Your voice and
+                            opinions are
+                            kept safe from external interference. We value your privacy and ensure your data is secure.
+                            Join us to connect, share, and grow together.
+                        </p>
+                        <a href="#" class="btn btn-primary btn-lg mt-3">Get Started</a>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img src="./assets/HGIC_CHAT.png" alt="Intro Image" class="img-fluid rounded shadow">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -49,11 +57,9 @@
                             <div class="card-body">
                                 <h3 class="card-title">Our Mission</h3>
                                 <p class="card-text">
-                                    To empower student leaders through a secure, collaborative platform that fosters
-                                    communication,
-                                    problem-solving, and peer support across departments—building a culture of
-                                    excellence, unity, and
-                                    responsibility.
+                                    Empower student leaders through a secure, collaborative platform that fosters
+                                    communication, problem-solving, and peer support—building a culture of excellence,
+                                    unity, and responsibility.
                                 </p>
                             </div>
                         </div>
@@ -64,8 +70,8 @@
                                 <h3 class="card-title">Our Vision</h3>
                                 <p class="card-text">
                                     A connected community of student leaders who inspire change, lead with integrity,
-                                    and strengthen
-                                    their schools through shared ideas, mutual respect, and purposeful collaboration.
+                                    and strengthen their schools through shared ideas, mutual respect, and purposeful
+                                    collaboration.
                                 </p>
                             </div>
                         </div>
@@ -93,13 +99,29 @@
         </section>
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <p class="text-center mb-0">© 2025 SOS-HGIC ChatPlat4m. All rights reserved.</p>
+    <footer class="footer py-3 bg-light">
+        <div class="my-footer">
+            <div class="address">
+                <p>SOS-HGIC, Tema Comm. 6</p>
+                <p>Accra, Ghana.</p>
+                <p>Email: yeboah_s/wusah_j@soshgic.edu.gh</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn btn-primary"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn btn-primary"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-primary"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="credits text-center">
+                <p>Developed by <a href="https://www.example.com">Sanctification Yeboah</a> and <a
+                        href="https://www.example.com">James Wusah</a></p>
+            </div>
+        </div>
+        <div class="copyright text-center mt-3">
+            <p>© 2025 SOS-HGIC ChatPlat4m. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
