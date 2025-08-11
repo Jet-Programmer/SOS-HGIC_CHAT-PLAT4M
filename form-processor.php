@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //of the symbols listed in the parenthesis
     if (!preg_match("/^[a-zA-Z-' ]*$/", $_POST["firstname"]) || !preg_match("/^[a-zA-Z-' ]*$/", $_POST["lastname"])) {
         echo "<script>alert('Only letters and white space allowed in names'); window.location='signup.php';</script>";
-        exit;
         // php filter variable make sure the email entered corresponds to a valid email address
     } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Invalid email format'); window.location='signup.php';</script>";
